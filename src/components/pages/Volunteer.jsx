@@ -1,10 +1,10 @@
 import { Box, Heading } from "@chakra-ui/react";
 
-const Home = () => {
+const Volunteer = () => {
   return (
     <Box w="100%">
-      <Heading>Home</Heading>
+      <Heading>Volunteer</Heading>
     </Box>
   );
 };
-export default Home;
+export default Volunteer;

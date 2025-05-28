@@ -1,10 +1,10 @@
 import { Box, Heading } from "@chakra-ui/react";
 
-const Home = () => {
+const Donate = () => {
   return (
     <Box w="100%">
-      <Heading>Home</Heading>
+      <Heading>Donate</Heading>
     </Box>
   );
 };
-export default Home;
+export default Donate;
