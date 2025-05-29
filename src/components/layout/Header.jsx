@@ -19,8 +19,8 @@ const Header = () => {
     <Box borderBottomWidth="1px" w="100vw" px="16px" pb="8px">
       <Flex
         direction={{ base: "row", md: "column" }}
-        justify={{ base: "flex-start", md: "space-between" }}
-        align={{ base: "flex-start", md: "center" }}
+        justify={{ base: "center", md: "space-between" }}
+        align={{ base: "center", md: "center" }}
         gap={4}
       >
         <Box w="100%" textAlign={{ base: "left", md: "center" }}>
@@ -28,7 +28,7 @@ const Header = () => {
             Estes Park Memorial Observatory
           </Heading>
         </Box>
-        <Box hideBelow="md" px="40px" w="100vw">
+        <Box hideBelow="md" px="40px" w="100vw" maxW="8xl">
           <Stack direction="row" justify="space-between">
             <NavHeadingLink to="/home">Home</NavHeadingLink>
             <NavHeadingLink to="/ourobservatory">
