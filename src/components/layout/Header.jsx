@@ -22,6 +22,7 @@ const Header = () => {
         justify={{ base: "center", md: "space-between" }}
         align={{ base: "center", md: "center" }}
         gap={4}
+        paddingTop={{ mdDown: "40px" }}
       >
         <Box w="100%" textAlign={{ base: "left", md: "center" }}>
           <Heading size={{ mdDown: "2xl", md: "4xl" }}>
