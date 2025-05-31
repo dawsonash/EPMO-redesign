@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -31,6 +31,11 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+h1,
+h2,
+h3 {
+  font-family: "Inter", sans-serif;
+}
 
 button {
   border-radius: 8px;
@@ -39,7 +44,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #3182ce;
   cursor: pointer;
   transition: border-color 0.25s;
 }

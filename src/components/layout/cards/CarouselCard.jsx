@@ -79,6 +79,8 @@ export default function CaptionCarousel() {
       <IconButton
         aria-label="left-arrow"
         position="absolute"
+        variant="outline"
+        bg={"0"}
         left={side}
         top={top}
         transform={"translate(0%, -50%)"}
@@ -91,6 +93,8 @@ export default function CaptionCarousel() {
       <IconButton
         aria-label="right-arrow"
         position="absolute"
+        variant="outline"
+        bg={"0"}
         right={side}
         top={top}
         transform={"translate(0%, -50%)"}
@@ -114,7 +118,6 @@ export default function CaptionCarousel() {
           >
             {/* This is the block you need to change, to customize the caption */}
             <Container
-              size="container.lg"
               height={{ base: "200px", md: "400px", lg: "500px" }}
               position="relative"
             >

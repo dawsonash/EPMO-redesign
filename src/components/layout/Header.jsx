@@ -16,7 +16,13 @@ const NavHeadingLink = ({ to, children }) => (
 
 const Header = () => {
   return (
-    <Box borderBottomWidth="1px" w="100vw" px="16px" pb="8px">
+    <Box
+      borderBottomWidth="1px"
+      w="100vw"
+      px="16px"
+      pb="8px"
+      paddingTop={{ md: "4", sm: "0" }}
+    >
       <Flex
         direction={{ base: "row", md: "column" }}
         justify={{ base: "center", md: "space-between" }}

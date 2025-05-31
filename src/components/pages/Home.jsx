@@ -1,6 +1,7 @@
 import CaptionCarousel from "../layout/cards/CarouselCard";
 import PhotoCard from "../layout/cards/PhotoCard";
 import observatoryWinter from "../../assets/images/observatoryWinter.jpg";
+import observatoryExploring from "../../assets/images/observatoryExploring.jpg";
 import {
   Button,
   Card,
@@ -12,8 +13,8 @@ import {
 
 const Home = () => {
   return (
-    <Container pt="32px">
-      <Stack gap={{ mdDown: "24px", md: "32px" }}>
+    <Container pt="8">
+      <Stack gap={{ mdDown: "4", md: "10" }}>
         <Heading size="3xl">Home</Heading>
 
         <Flex
@@ -82,6 +83,40 @@ const Home = () => {
             w={{ base: "100%", md: "48%" }}
           >
             <CaptionCarousel />
+          </Card.Root>
+        </Flex>
+        <Flex
+          justify="center"
+          alignItems="center"
+          gap={4}
+          wrap="wrap"
+          direction={{ base: "column", md: "row" }}
+        >
+          <PhotoCard
+            src={observatoryExploring}
+            alt="Observatory with children learning"
+          />
+          <Card.Root padding={2} gap={4} w={{ base: "100%", md: "48%" }}>
+            <Card.Title>Support the Observatory</Card.Title>
+            <Card.Description>
+              The Estes Park Memorial Observatory runs entirely on donations
+              through the Angels Above Foundation, a 501(c)(3) nonprofit. Every
+              dollar goes directly toward maintaining and improving the
+              observatory—our team is 100% volunteer-based.
+            </Card.Description>
+            <Card.Description>
+              Ways to Give: Donate via PayPal – Easy, secure, and fully
+              tax-deductible. Buy a Brick – Personalize a piece of our Human
+              Sundial Project. Visit our gift shop for EPMO tees, mugs, and
+              more.
+            </Card.Description>
+            <Card.Description>
+              Your support helps inspire wonder, curiosity, and science
+              education in our community.
+            </Card.Description>
+            <Card.Footer>
+              <Button>Learn More</Button>
+            </Card.Footer>
           </Card.Root>
         </Flex>
       </Stack>

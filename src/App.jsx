@@ -9,6 +9,7 @@ import Projects from "./components/pages/Projects";
 import Resources from "./components/pages/Resources";
 import Visit from "./components/pages/Visit";
 import Volunteer from "./components/pages/Volunteer";
+import Footer from "./components/layout/Footer";
 import { Provider } from "./components/ui/provider";
 import { Routes, Route } from "react-router";
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/donate" element={<Donate />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </Provider>
   );
 }
