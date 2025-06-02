@@ -1,6 +1,16 @@
-import { Container, Stack, Heading, Card, Flex } from "@chakra-ui/react";
+import {
+  Container,
+  Stack,
+  Heading,
+  Card,
+  Flex,
+  Image,
+  Box,
+} from "@chakra-ui/react";
 import PhotoCard from "../layout/cards/PhotoCard";
+import observatoryClassroom from "../../assets/images/observatoryClassroom.jpg";
 import observatorySummer from "../../assets/images/observatorySummer.jpg";
+import telescope from "../../assets/images/telescope.jpg";
 
 const OurObservatory = () => {
   return (
@@ -36,6 +46,63 @@ const OurObservatory = () => {
               Observatory and come visit anytime!
             </Card.Description>
             <Card.Footer />
+          </Card.Root>
+        </Flex>
+        <Flex align={"flex-start"} w={"100%"} px={{ sm: 2, md: 4 }}>
+          <Heading size={"4xl"}>Equipment</Heading>
+        </Flex>
+        <Flex
+          justify="center"
+          alignItems="center"
+          gap={4}
+          wrap="wrap"
+          direction={{ base: "column", md: "row" }}
+        >
+          <Card.Root
+            gap={2}
+            w={{ base: "100%", md: "48%" }}
+            overflow="hidden"
+            p={2}
+          >
+            <Image
+              src={observatoryClassroom}
+              alt="Classroom in observatory"
+              rounded={"md"}
+            />
+            <Card.Title>Facility</Card.Title>
+            <Card.Description>
+              <Box spacing={2} styleType="disc" pl={4}>
+                <li>60′ x 40′ warm room/conference area</li>
+                <li>16′ diameter observatory dome</li>
+                <li>Concrete & steel pier for telescope mount</li>
+                <li>Small office, workshop, storage & lavatory</li>
+                <li>Constellation star wall</li>
+                <li>State-of-the-art audio/visual and Internet equipment</li>
+              </Box>
+            </Card.Description>
+          </Card.Root>
+          <Card.Root w={{ base: "100%", md: "48%" }} overflow="hidden" p={2}>
+            <Image
+              src={telescope}
+              alt="Classroom in observatory"
+              rounded="md"
+            />
+            <Card.Title>Telescope</Card.Title>
+            <Card.Description>
+              <li>
+                16 inch Ritchey-Chretien f/8 Telescope
+                <li>Paramount ME II Telescope Mount</li>
+                <li>
+                  SkyX Professional Edition Astronomy Software running on
+                  state-of-the-art PC
+                </li>
+                <li>
+                  Computer control of telescope, mount and dome, adaptable to
+                  remote operation
+                </li>
+                <li>TV projection from telescope to classroom monitors</li>
+              </li>
+            </Card.Description>
           </Card.Root>
         </Flex>
       </Stack>
