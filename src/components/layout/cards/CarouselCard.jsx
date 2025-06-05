@@ -12,6 +12,7 @@ import {
   Heading,
   Text,
   Container,
+  Flex,
 } from "@chakra-ui/react";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
@@ -25,7 +26,7 @@ const settings = {
   infinite: true,
   autoplay: true,
   speed: 500,
-  autoplaySpeed: 9000,
+  autoplaySpeed: 5000,
   slidesToShow: 1,
   slidesToScroll: 1,
 };
@@ -41,25 +42,11 @@ export default function CaptionCarousel(props) {
 
   // This list contains all the data for carousels
   // This can be static or loaded from a server
-  const cards = [
-    {
-      title: props.title,
-      text: props.text,
-      image: props.image,
-    },
-    {
-      title: "Design Projects 2",
-      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
-      image:
-        "https://images.unsplash.com/photo-1438183972690-6d4658e3290e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2274&q=80",
-    },
-    {
-      title: "Design Projects 3",
-      text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
-      image:
-        "https://images.unsplash.com/photo-1507237998874-b4d52d1dd655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60",
-    },
-  ];
+  const cards = props.cards.map((item) => ({
+    title: item.title,
+    text: item.photographer,
+    image: item.photo, // or adjust how you store photo references
+  }));
 
   return (
     <Box position={"relative"} overflow={"hidden"}>
@@ -78,8 +65,9 @@ export default function CaptionCarousel(props) {
       <IconButton
         aria-label="left-arrow"
         position="absolute"
-        variant="outline"
-        bg={"0"}
+        variant="solid"
+        color={"white"}
+        bg={"black"}
         left={side}
         top={top}
         transform={"translate(0%, -50%)"}
@@ -92,8 +80,9 @@ export default function CaptionCarousel(props) {
       <IconButton
         aria-label="right-arrow"
         position="absolute"
-        variant="outline"
-        bg={"0"}
+        variant="solid"
+        color={"white"}
+        bg={"black"}
         right={side}
         top={top}
         transform={"translate(0%, -50%)"}
@@ -125,20 +114,27 @@ export default function CaptionCarousel(props) {
                 w={"full"}
                 maxW={"lg"}
                 position="absolute"
-                top={{ base: "70%", mdToLg: "80%" }}
+                top={{ base: "20%", md: "80%", lg: "60%" }}
                 transform="translate(0, -50%)"
               >
-                <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
-                  {card.title}
-                </Heading>
-                <Text
-                  fontSize={{ base: "md", lg: "lg" }}
-                  color="GrayText"
-                  bg={"white"}
-                  opacity={"20%"}
+                <Flex
+                  direction={"column"}
+                  bg={"whiteAlpha.600"}
+                  width="fit-content"
+                  rounded="md"
+                  px={4}
+                  py={2}
                 >
-                  {card.text}
-                </Text>
+                  <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
+                    {card.title}
+                  </Heading>
+                  <Text
+                    fontSize={{ base: "md", lg: "lg" }}
+                    color="DarkGrayText"
+                  >
+                    {card.text}
+                  </Text>
+                </Flex>
               </Stack>
             </Container>
           </Box>

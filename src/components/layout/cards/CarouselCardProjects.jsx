@@ -30,7 +30,7 @@ const settings = {
   slidesToScroll: 1,
 };
 
-export default function CaptionCarousel(props) {
+export default function CaptionCarouselProjects(props) {
   // As we have used custom buttons, we need a reference variable to
   // change the state
   const [slider, setSlider] = React.useState(null);
@@ -41,11 +41,7 @@ export default function CaptionCarousel(props) {
 
   // This list contains all the data for carousels
   // This can be static or loaded from a server
-  const cards = props.images.map((img, index) => ({
-    image: img,
-    title: props.title,
-    description: props.text,
-  }));
+  const cards = [{ image: props.image }, { image: props.image2 }];
 
   return (
     <Box position={"relative"} overflow={"hidden"}>
@@ -64,8 +60,9 @@ export default function CaptionCarousel(props) {
       <IconButton
         aria-label="left-arrow"
         position="absolute"
-        variant="outline"
-        bg={"0"}
+        variant="solid"
+        color={"white"}
+        bg={"black"}
         left={side}
         top={top}
         transform={"translate(0%, -50%)"}
@@ -78,8 +75,9 @@ export default function CaptionCarousel(props) {
       <IconButton
         aria-label="right-arrow"
         position="absolute"
-        variant="outline"
-        bg={"0"}
+        variant="solid"
+        color={"white"}
+        bg={"black"}
         right={side}
         top={top}
         transform={"translate(0%, -50%)"}

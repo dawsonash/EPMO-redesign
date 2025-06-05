@@ -2,6 +2,7 @@ import CaptionCarousel from "../layout/cards/CarouselCard";
 import PhotoCard from "../layout/cards/PhotoCard";
 import observatoryWinter from "../../assets/images/observatoryWinter.jpg";
 import observatoryExploring from "../../assets/images/observatoryExploring.jpg";
+import memberAstroPhotosData from "../../assets/props/memberAstroPhotosData";
 import {
   Button,
   Card,
@@ -42,7 +43,7 @@ const Home = () => {
               fly-bys and more! We also have fun ongoing projects like our Human
               Sundial Project. EPMO is currently offering opportunities for
               volunteers. Just contact us to get involved and learn about our
-              sky along the way! Can’t help? Donate to our Estes Park
+              sky along the way! Can't help? Donate to our Estes Park
               Observatory and come visit anytime!
             </Card.Description>
             <Card.Footer />
@@ -82,7 +83,8 @@ const Home = () => {
             gap={4}
             w={{ base: "100%", md: "48%" }}
           >
-            <CaptionCarousel />
+            <Card.Title>Member Photos</Card.Title>
+            <CaptionCarousel cards={memberAstroPhotosData} />
           </Card.Root>
         </Flex>
         <Flex
@@ -105,8 +107,8 @@ const Home = () => {
               observatory—our team is 100% volunteer-based.
             </Card.Description>
             <Card.Description>
-              Ways to Give: Donate via PayPal – Easy, secure, and fully
-              tax-deductible. Buy a Brick – Personalize a piece of our Human
+              Ways to Give: Donate via PayPal - Easy, secure, and fully
+              tax-deductible. Buy a Brick - Personalize a piece of our Human
               Sundial Project. Visit our gift shop for EPMO tees, mugs, and
               more.
             </Card.Description>

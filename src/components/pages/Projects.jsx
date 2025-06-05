@@ -15,7 +15,7 @@ const Projects = () => {
           direction={{ base: "column", md: "row" }}
         >
           <Card.Root padding={2} gap={4} w={{ base: "100%", md: "100%" }}>
-            <CaptionCarouselProjects {...humanSundialProjectProps.image} />
+            <CaptionCarouselProjects {...humanSundialProjectProps} />
             <Card.Title>{humanSundialProjectProps.title}</Card.Title>
             <Card.Description>{humanSundialProjectProps.text}</Card.Description>
           </Card.Root>
