@@ -45,6 +45,7 @@ export default function CaptionCarousel(props) {
   const cards = props.cards.map((item) => ({
     title: item.title,
     text: item.photographer,
+    description: item.description,
     image: item.photo, // or adjust how you store photo references
   }));
 
@@ -96,7 +97,7 @@ export default function CaptionCarousel(props) {
         {cards.map((card, index) => (
           <Box
             key={index}
-            minHeight={{ base: "300px", md: "500px", lg: "600px" }}
+            minHeight={{ base: "300px", md: "500px", lg: "900px" }}
             position="relative"
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
@@ -114,7 +115,7 @@ export default function CaptionCarousel(props) {
                 w={"full"}
                 maxW={"lg"}
                 position="absolute"
-                top={{ base: "20%", md: "80%", lg: "60%" }}
+                top={{ base: "20%", md: "80%", lg: "67%" }}
                 transform="translate(0, -50%)"
               >
                 <Flex

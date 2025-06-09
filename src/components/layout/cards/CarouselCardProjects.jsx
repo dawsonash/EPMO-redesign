@@ -41,7 +41,7 @@ export default function CaptionCarouselProjects(props) {
 
   // This list contains all the data for carousels
   // This can be static or loaded from a server
-  const cards = [{ image: props.image }, { image: props.image2 }];
+  const cards = props.images || [];
 
   return (
     <Box position={"relative"} overflow={"hidden"}>
